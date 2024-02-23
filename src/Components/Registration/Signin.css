@@ -1,0 +1,16 @@
+.signin-container {
+    background-image: url("https://img.freepik.com/free-photo/vintage-paper-table-shoe-polishing-tools-jobs-career-concept_53876-127082.jpg?size=626&ext=jpg&ga=GA1.1.606049827.1699361874&semt=ais");
+    background-repeat: no-repeat;
+    /* width: 100%;   */
+    z-index: 2;
+    background-color: aquamarine;
+    background-size: cover;
+    filter: opacity();
+  }
+  .signin-form{
+    /* background-color: white; */
+    /* opacity: 30%; */
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    
+  }

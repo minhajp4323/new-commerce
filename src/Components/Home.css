@@ -1,0 +1,36 @@
+.home {
+  /* background-image: url("https://i.pinimg.com/736x/f0/1d/7d/f01d7d234aad1c9a6b7f5c5a6c7d524e.jpg"); */
+  background-image: url("https://cdn.create.vista.com/api/media/small/156082522/stock-photo-oxford-shoes-on-carpet-near-armchair");
+  background-repeat: no-repeat;
+  background-color: rgba(0,0,0, 0.4);
+  height: 100vmin;
+  /* height: 100%; */
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  text-align: start;
+  filter: blur(1px);
+  border-radius: 20px;
+  margin: 15px;
+  margin-top: 0px;
+  
+}
+.heading{
+  position: absolute;
+  top: 400px;
+  left: 5%;
+  text-align: start;
+  font-weight: 900;
+  font-family: fantasy;
+  font-stretch: wider;
+}
+h1{
+  color: rgb(59, 59, 59);
+}
+button{
+  border-radius: 7px;
+  border: 10px black;
+  margin: 3px;
+  color: rgb(50, 50, 50);
+  font-family: sans-serif;
+}
+
