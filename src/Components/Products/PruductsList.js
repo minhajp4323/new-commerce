@@ -9,16 +9,7 @@ export const Product = [
     imageUrl:
       "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,b_rgb:f5f5f5/7ef38ab5-528e-4da4-b27d-0603e6923f76/air-force-1-07-shoes-dTN9bg.png",
   },
-  {
-    id: 2,
-    name: "LITTLE KID & BIG KID LITE RACER ADAPT 5.0 SUSTAINABLE RUNNING SHOES",
-    category: "Kids",
-    qty: 1,
-    stock: 50,
-    price: 7524,
-    imageUrl: require("../../Assets/BOYS' ADIDAS LITTLE KID & BIG KID LITE RACER ADAPT 5.0 SUSTAINABLE RUNNING SHOES.avif"),
-  },
-
+ 
   {
     id: 3,
     name: "KIDS' VANS DOHENY SKATE SHOES",
