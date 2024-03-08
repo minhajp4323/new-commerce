@@ -18,33 +18,33 @@ function Signin() {
   const submit = (e) => {
     e.preventDefault();
     const username = userNameRef.current.value;
-    const emailId = emailIdRef.current.value;
-    const phoneNumber = phoneNumberRef.current.value;
+    // const emailId = emailIdRef.current.value;
+    // const phoneNumber = phoneNumberRef.current.value;
     const password = passwordRef.current.value;
     const confirmpassword = confirmpasswordRef.current.value;
 
     if (
       !username ||
-      !emailId ||
-      !phoneNumber ||
+      // !emailId ||
+      // !phoneNumber ||
       !password ||
       !confirmpassword
     ) {
       setErrorMessage("Please fill out the form");
       return;
     }
-    const isEmailValid = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(
-      emailId
-    );
-    if (!isEmailValid) {
-      setErrorMessage("Please enter a valid email id");
-      return;
-    }
-    const isNumber = /^[0-9]{10}$/.test(phoneNumber);
-    if (!isNumber) {
-      setErrorMessage("Please enter 10 digit number");
-      return;
-    }
+    // const isEmailValid = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(
+    //   emailId
+    // );
+    // if (!isEmailValid) {
+    //   setErrorMessage("Please enter a valid email id");
+    //   return;
+    // }
+    // const isNumber = /^[0-9]{10}$/.test(phoneNumber);
+    // if (!isNumber) {
+    //   setErrorMessage("Please enter 10 digit number");
+    //   return;
+    // }
     if (password.length < 8) {
       setErrorMessage("Enter at least 8 characters for the password");
       return;
@@ -55,8 +55,6 @@ function Signin() {
     setErrorMessage("");
     const newUser = {
       userName: username,
-      emailId: emailId,
-      phoneNumber: phoneNumber,
       password: password,
       confirmpassword: confirmpassword,
       cart: [],
@@ -80,10 +78,11 @@ function Signin() {
                 type="text"
                 className="form-control mt-1"
                 placeholder="Enter Username.."
+                defaultValue={"Minhaj"}
                 required
               />
             </div>
-            <div className="form-group mt-3">
+            {/* <div className="form-group mt-3">
               <label>Email</label>
               <input
                 ref={emailIdRef}
@@ -92,8 +91,8 @@ function Signin() {
                 placeholder="Enter Email.. "
                 required
               />
-            </div>
-            <div className="mform-group mt-3">
+            </div> */}
+            {/* <div className="mform-group mt-3">
               <label>Phone Number</label>
               <input
                 ref={phoneNumberRef}
@@ -102,7 +101,7 @@ function Signin() {
                 placeholder="Enter Phone number"
                 required
               />
-            </div>
+            </div> */}
             <div className="form-group mt-3">
               <label>Password</label>
               <input
@@ -110,6 +109,7 @@ function Signin() {
                 type="password"
                 className="form-control mt-1"
                 placeholder="Enter password"
+                defaultValue={"1234567890"}
                 required
               />
             </div>
@@ -120,6 +120,7 @@ function Signin() {
                 type="password"
                 className="form-control mt-1"
                 placeholder="Confirm Password"
+                defaultValue={"1234567890"}
                 required
               />
             </div>
@@ -133,7 +134,8 @@ function Signin() {
                 Submit
               </button>
               <p className="forgot text-right mt-2">
-                Already have an account <a onClick={()=>navigate("/login")}>Login here</a>
+                Already have an account{" "}
+                <a onClick={() => navigate("/login")}>Login here</a>
               </p>
             </div>
           </div>

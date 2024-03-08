@@ -4,14 +4,11 @@ import { Data } from "../Main";
 import { FaRegTrashCan } from "react-icons/fa6";
 import MainNavbar from "./MainNavbar";
 
-
-
 import {
   MDBCardBody,
   MDBCardImage,
   MDBCol,
   MDBContainer,
-  MDBIcon,
   MDBRow,
   MDBTypography,
 } from "mdb-react-ui-kit";
@@ -64,22 +61,36 @@ function Cart() {
     0
   );
   const clear = () => {
-    loginUser.cart = [];
-    setCartuser([]);
-    toast.success("Your cart is empty");
+    if (loginUser && loginUser.cart.length === 0) {
+      toast.success("cart is already empty");
+    } else if (!loginUser) {
+      navigate("/login");
+    } else {
+      loginUser.cart = [];
+      setCartuser([]);
+      toast.success("Your cart is empty");
+    }
   };
   const order = () => {
-    navigate("/payment");
-    setvieworder(cartuser);
-    if (loginUser) {
-      loginUser.cart = [];
+    // console.log(loginUser.cart);
+    if (loginUser == null) {
+      toast.success("There is no product to buy");
+    } else if (loginUser.cart.length === 0) {
+      toast.success("There is no product to buy");
+    } else {
+      navigate("/payment");
+      toast.success("Proceed to pay");
+      setvieworder(cartuser);
+      if (loginUser) {
+        loginUser.cart = [];
+      }
     }
   };
   // console.log(loginUser?.cart);
 
   return (
     <div>
-        <MainNavbar />
+      <MainNavbar />
 
       <section className="nav h-100 w-50">
         <MDBContainer className="py-5 h-100 justify-content-center align-items-center ">
@@ -147,10 +158,7 @@ function Cart() {
                     </MDBCol>
                     <MDBCol md="12" lg="6" xl="4" className="text-end">
                       <a>
-                        
-                      <FaRegTrashCan onClick={()=>removeTask(item.id)} />
-
-
+                        <FaRegTrashCan onClick={() => removeTask(item.id)} />
                       </a>
                     </MDBCol>
                   </MDBRow>
@@ -160,13 +168,21 @@ function Cart() {
           </MDBRow>
         </MDBContainer>
       </section>
-      <h1>Total Amount: ₹ {reducer} </h1>
-      <Button className="bg-info m-2 p-2" onClick={() => clear()}>
-        Clear Cart
-      </Button>
-      <Button className="bg-success m-2 p-2" onClick={order}>
-        Buy All
-      </Button>
+      {!loginUser ? (
+        <h1>Please Login</h1>
+      ) : loginUser && loginUser.cart.length === 0 ? (
+        <h1>Cart is empty</h1>
+      ) : (
+        <div>
+          <h1>Total Amount: ₹ {reducer} </h1>
+          <Button className="bg-info m-2 p-2" onClick={() => clear()}>
+            Clear Cart
+          </Button>
+          <Button className="bg-success m-2 p-2" onClick={order}>
+            Buy All
+          </Button>
+        </div>
+      )}
     </div>
   );
 }

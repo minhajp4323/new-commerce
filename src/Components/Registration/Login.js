@@ -50,18 +50,21 @@ function Login() {
                 className="form-control mt-1"
                 placeholder="Enter Username"
                 required
+                defaultValue={"Minhaj"}
+                
                 ref={user}
               />
             </div>
-            <div className="form-group mt-3">
+            {/* <div className="form-group mt-3">
               <label>Email</label>
               <input
                 type="email"
                 className="form-control mt-1"
                 placeholder="Enter Email"
+                defaultValue={"minhaj@m.c"}
                 required
               />
-            </div>
+            </div> */}
             <div className="form-group mt-3">
               <label>Password</label>
               <input
@@ -69,6 +72,7 @@ function Login() {
                 className="inputs form-control mt-1"
                 placeholder="Enter Password"
                 required
+                defaultValue={"1234567890"}
                 ref={pass}
               />
             </div>

@@ -3,7 +3,7 @@
 }
 
 /* home */
-.usericon{
+.usericon {
   width: 30px;
 }
 
@@ -86,12 +86,12 @@ label {
   color: rgb(34, 34, 34);
   font-weight: 800;
 }
-.container-pro{
+.container-pro {
   display: flex;
 }
-.loginbtn{
+.loginbtn {
   color: black;
-background-color: blue;
+  background-color: blue;
 }
 .col-7.col-md-3 {
   display: flex;

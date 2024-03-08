@@ -31,22 +31,14 @@ import AddProduct from "./Components/AdminSide/Addproduct";
 export const Data = createContext();
 
 function Main() {
-  const [userData, setUserData] = useState([
-    {
-      userName: "Minhaj",
-      emailId: "minhajsam1233@gmail.com",
-      phoneNumber: "9846564323",
-      password: "1234567890",
-      confirmpassword: "1234567890",
-      cart: [],
-    },
-  ]);
+  const [userData, setUserData] = useState([]);
   const [login, setLogin] = useState(false);
   const [loginUser, setLoginUser] = useState(null);
   const [product, setProduct] = useState(Product);
   const [cart, setCart] = useState();
   const [search, setSearch] = useState("");
   const [vieworder, setvieworder] = useState([]);
+  console.warn(userData);
   return (
     <div>
       <Data.Provider

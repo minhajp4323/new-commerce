@@ -6,7 +6,7 @@ import { Data } from "../../Main";
 
 const Users = () => {
   const { userData } = useContext(Data);
-  const initialValue = 0;
+  // const initialValue = 0;
 
   return (
     <div>

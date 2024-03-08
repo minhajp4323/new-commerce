@@ -10,6 +10,8 @@ import { Data } from "../Main";
 import { useContext } from "react";
 import toast from "react-hot-toast";
 import { CgProfile } from "react-icons/cg";
+import { GoHeart } from "react-icons/go";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function MainNavbar() {
   const navigate = useNavigate();
@@ -97,8 +99,13 @@ function MainNavbar() {
             >
               Cart
             </Button>
+            <div>
+              <GoHeart size={20} className="wishlist mx-2" />
+            </div>
 
             {/* <FaCartArrowDown /> */}
+            <FontAwesomeIcon icon="fa-regular fa-heart" />
+            <FontAwesomeIcon icon="fa-solid fa-heart" />
 
             <Form.Control
               type="search"
