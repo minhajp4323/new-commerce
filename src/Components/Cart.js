@@ -105,7 +105,6 @@ function Cart() {
                     <span className="text-warning"></span>
                     <a href="#!">
                       {reducer}
-                      {/* <i className="fas fa-angle-down mt-1"></i> */}
                     </a>
                   </p>
                 </div>
