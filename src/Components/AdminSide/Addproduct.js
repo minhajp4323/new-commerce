@@ -64,7 +64,9 @@ const AddProduct = () => {
                   className="form-control"
                   required
                 />
+                
               </div>
+              
 
               <div className="mb-3">
                 <label htmlFor="price" className="form-label">
@@ -90,6 +92,7 @@ const AddProduct = () => {
                   className="form-control"
                   required
                 />
+                
               </div>
 
               <div className="mb-3">

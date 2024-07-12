@@ -34,6 +34,7 @@ const AdminLogin = () => {
                 placeholder="Enter Username"
                 required
                 ref={user}
+                defaultValue= "minhaj"
               />
             </div>
 
@@ -45,6 +46,7 @@ const AdminLogin = () => {
                 placeholder="Enter Password"
                 required
                 ref={pass}
+                defaultValue= "minhaj"
               />
             </div>
             <div className="d-grid gap-2 mt-3">
